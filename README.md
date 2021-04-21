@@ -1,4 +1,4 @@
-# Machine Learning for the Web
+# Web Machine Learning
 
 ## Environment Setup
 
