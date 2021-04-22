@@ -28,10 +28,14 @@ twitter_username: webmachinelearning
 github_username:  webmachinelearning
 logo: https://avatars2.githubusercontent.com/u/42399997
 
+google_analytics: UA-147662084-1
+
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+
+host: 0.0.0.0
 
 # Exclude from processing.
 # The following items will not be processed, by default.
