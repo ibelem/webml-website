@@ -16,7 +16,7 @@ dl, dd, ol, ul, figure {
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
-  background-color: $background-color;
+  /* background-color: $background-color; */
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -26,6 +26,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  font-size: 14px;
 }
 
 
@@ -77,9 +78,9 @@ figcaption {
 /**
  * Lists
  */
-ul, ol {
-  margin-left: $spacing-unit;
-}
+// ul, ol {
+//   margin-left: $spacing-unit;
+// }
 
 li {
   > ul,
@@ -105,25 +106,30 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $brand-color;
   text-decoration: none;
-
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
+  padding: 3px 0;
+  border-bottom: 1px dashed;
 
   &:hover {
-    color: $text-color;
-    text-decoration: underline;
+    color: $brand-color2;
+    text-decoration: none;
+  }
+
+  &:hover .svg-icon {
+    fill: $brand-color2;
   }
 
   .social-media-list &:hover {
     text-decoration: none;
 
     .username {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 }
 
+a .svg-icon {
+  fill: $brand-color;
+}
 
 /**
  * Blockquotes
@@ -215,6 +221,10 @@ pre {
     fill: #{$grey-color};
     padding-right: 5px;
     vertical-align: text-top;
+}
+
+.social-media-list .svg-icon:hover {
+  fill: #{$brand-color2};
 }
 
 .social-media-list {

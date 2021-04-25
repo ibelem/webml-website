@@ -1,6 +1,6 @@
 <header class="site-header" role="banner">
 
-  <div class="wrapper">
+  <!-- <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
@@ -27,5 +27,27 @@
 
     </nav>
     {%- endif -%}
+  </div> -->
+
+  <div class="wrapper">
+    <nav class="menu">
+      <ol>
+        <li class="menu-item"><a class="link link--dia" href="/">Home</a></li>
+        <li class="menu-item">
+          <a class="link link--dia" href="/webnn">WebNN</a>
+          <ol class="sub-menu">
+            <li class="menu-item"><a href="/webnn-getstarted">Get Started</a></li>
+            <li class="menu-item"><a href="/webnn-spec">Spec</a></li>
+            <li class="menu-item"><a href="/webnn-demo">Demo</a></li>
+            <li class="menu-item"><a href="/webnn-performance">Performance</a></li>
+          </ol>
+        </li>
+        <li class="menu-item"><a class="link link--dia" href="#">Model Loader</a></li>
+        <li class="menu-item"><a class="link link--dia" href="/blog">Blog</a></li>
+        <li class="menu-item"><a class="link link--dia" href="/community">Community</a></li>
+        <li class="menu-item"><a class="link link--dia faq" href="/faq">FAQ</a></li>
+      </ol>
+    </nav>
   </div>
+
 </header>

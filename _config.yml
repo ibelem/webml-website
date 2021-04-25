@@ -1,28 +1,8 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
 title: Web Machine Learning
 email: anssi.kostiainen@__.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >
   Making Machine Learning a first-class web citizen
-baseurl: "/website" # the subpath of your site, e.g. /blog
+baseurl: ""
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: webmachinelearning
 github_username:  webmachinelearning
@@ -30,7 +10,6 @@ logo: https://avatars2.githubusercontent.com/u/42399997
 
 google_analytics: UA-147662084-1
 
-# Build settings
 theme: minima
 plugins:
   - jekyll-feed
