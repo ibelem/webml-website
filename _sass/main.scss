@@ -21,6 +21,10 @@
     align-items: center;
   }
 
+  .less {
+    flex: 0 1 38%;
+  }
+
   #herosvg svg {
     height: 500px;
   }
@@ -38,19 +42,19 @@
         position: relative;
         display: flex;
         align-items: center;
-        height: 50px;
+        height: 1.8rem;
   
         .block {
           width: 0%;
           height: inherit;
           background: #ffb510;
           position: absolute;
-          animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+          animation: mainBlock 1s cubic-bezier(.74, .06, .4, .92) forwards;
           display: flex;
         }
   
         h1 {
-          color: $brand-color2;
+          color: $brand-color;
           -webkit-animation: mainFadeIn 2s forwards;
           -o-animation: mainFadeIn 2s forwards;
           animation: mainFadeIn 2s forwards;
@@ -59,13 +63,12 @@
           display: flex;
           align-items: baseline;
           position: relative;
+          font-size: 1.8rem;
   
           span {
             width:0px;
             height: 0px;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
+            border-radius: 0%;
   
             background: #ffb510;
             -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
@@ -86,8 +89,8 @@
         position: relative;
         display: flex;
         align-items: center;
-        height: 40px;
-        margin-top: 10px;
+        margin: 1.6rem 0 1rem 0;
+        height: 1.6rem;
   
         .block {
           width: 0%;
@@ -104,10 +107,15 @@
           animation-delay: 3.2s;
           opacity: 0;
           color: $brand-color2;
-          font-size: 1.8rem;
+          font-size: 1.6rem;
+          line-height: 1.8rem;
         }
       }
     }
+  }
+
+  .t {
+      font-family: Poppins;
   }
 
   .des {
@@ -125,13 +133,13 @@
   
     }
     50% {
-      width: 100%;
+      width: 30%;
       left: 0;
   
     }
     100% {
       width: 0;
-      left: 100%;
+      left: 30%;
     }
   }
   
@@ -167,7 +175,7 @@
       width: 0px;
       height: 0px;
       background: #e9d856;
-      border: 0px solid #ddd;
+      border: 0px;
       opacity: 0;
     }
     50% {
@@ -185,15 +193,15 @@
      }
      80% {
         width: 10px;
-      height: 10px;
+        height: 10px;
         bottom: 20px
      }
     100% {
       width: 7px;
       height: 7px;
-      background: #e9d856;
-      border: 0px solid #222;
-      bottom: 13px;
+      background: $faq-color;
+      border: 0px;
+      bottom: 12px;
   
     }
   }
@@ -215,9 +223,8 @@
   }
 
   .menu {
-    margin-top: 1rem;
     color: $grey-color;
-    height: 4rem;
+    margin-top: 4px;
   }
   .menu ol {
     list-style-type: none;
@@ -228,6 +235,7 @@
     max-width: 1000px;
     padding: 0 2rem;
     display: flex;
+    align-items: center;
   }
   .menu > ol > .menu-item {
     flex: 1;
@@ -251,16 +259,15 @@
 //   }
   .menu-item {
     position: relative;
-    line-height: 1srem;
     text-align: center;
   }
   .menu-item a {
     text-overflow: ellipsis;
-    font-weight: 400;
     display: inline-block;
     color: $grey-color;
     position: relative;
     white-space: nowrap;
+    font-weight: 500;
   }
 
   .menu-item a:hover {
@@ -280,13 +287,14 @@
 
   .sub-menu {
     border-radius: 3px;
-    border: 1px solid $brand-color;
+    border: 1px solid rgba(200,200,200, 0.5);
     position: absolute;
     width: 100%;
     top: 100%;
     left: 0;
     display: none;
     z-index: 1;
+    box-shadow: 2px 2px 10px 0px rgba(200,200,200,0.25);
   }
 
   .sub-menu:before {
@@ -299,13 +307,14 @@
     border: 0 solid transparent;
     border-right-width: 7px;
     border-left-width: 7px;
-    border-bottom: 7px solid $brand-color;
+    border-bottom: 7px solid rgba(200,200,200, 0.5);
+    box-shadow: 2px 2px 10px 0px rgba(200,200,200,0.25);
   }
 
   .sub-menu .menu-item {
     padding: 0.5rem 0;
     opacity: 0;
-    background: $brand-color;
+    background: rgba(200,200,200,0.25);
     transform-origin: bottom;
     animation: enter 0.2s ease forwards;
   }
@@ -322,13 +331,17 @@
     animation-delay: 0.2s;
   }
   .sub-menu .menu-item:hover {
-    background: #fff;
-    color: $brand-color;
+    color: #fff;
+    background: $brand-color;
   }
   .sub-menu .menu-item a {
     padding: 0 0.75rem;
+  }
+
+  .sub-menu .menu-item:hover a, .sub-menu .menu-item a:hover {
     color: #fff;
   }
+
 
   .link::before {
     content: '';
@@ -383,15 +396,16 @@
     transition-delay: 0s;
   }
 
-  .sub-menu .menu-item:hover a, .sub-menu .menu-item a:hover {
-    background: #fff;
-    color: $brand-color;
-  }
-
   @media screen and (max-width: 600px) {
     #herosvg svg {
         width: 90vw;
     }
+    .hb-item {
+        flex: 0 1 100%;
+      }
+      .less {
+        flex: 0 1 100%;
+      }
     .sub-menu .menu-item {
       background: #C06C84;
     }
@@ -400,6 +414,7 @@
   @media screen and (max-width: 600px) {
     .menu {
       position: relative;
+      margin-top: 2rem;
     }
     .menu:after {
       content: "";
@@ -408,7 +423,7 @@
       right: 1rem;
       width: 30px;
       height: 4px;
-      background: red;
+      background: $grey-color;
       box-shadow: 0 10px #FFF, 0 -10px #FFF;
     }
     .menu > ol {
@@ -423,7 +438,7 @@
       flex: 0;
       opacity: 0;
       animation: enter 0.3s ease-out forwards;
-      border: 2px solid $faq-color;
+      border: 2px solid rgba(200,200,200,0.25);
       background-color: #fff;
       z-index: 10000;
     }
@@ -470,6 +485,12 @@
       left: -2rem;
       top: 50%;
       transform: translateY(-50%);
+    }
+    .herobar {
+        margin-top: 80px;
+    }
+    #herosvg, #herosvg svg {
+        height: 280px;
     }
   }
 
@@ -584,27 +605,4 @@
     50% {
       border-color: transparent
     }
-  }
-
-  footer svg {
-      height: 0.8rem;
-      width: 0.8rem;
-      margin: 0 0 0 0.5rem;
-      display: inline-block;
-  }
-
-  footer a {
-      border-bottom: 0;
-  }
-
-  footer svg.pathfill {
-    fill: $grey-color;
-}
-
-  footer svg.pathfill:hover {
-      fill: $brand-color;
-  }
-
-  footer .follow {
-      display: inline-block;
   }

@@ -105,13 +105,10 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
   color: $brand-color;
-  text-decoration: none;
   padding: 3px 0;
-  border-bottom: 1px dashed;
 
   &:hover {
     color: $brand-color2;
-    text-decoration: none;
   }
 
   &:hover .svg-icon {
