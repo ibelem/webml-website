@@ -278,7 +278,7 @@
       background-color: $faq-color;
       color: #fff !important;
       padding: 4px 16px;
-      border-radius: 3px;
+      border-radius: 5px;
   }
 
   .faq:hover {
@@ -441,6 +441,7 @@
       border: 2px solid rgba(200,200,200,0.25);
       background-color: #fff;
       z-index: 10000;
+      width: 100%;
     }
     .menu > ol > .menu-item:nth-child(1) {
       animation-delay: 0s;

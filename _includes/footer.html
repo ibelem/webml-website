@@ -1,11 +1,13 @@
-<footer class="site-footer ">
+<footer class="site-footer">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <a href="/">Web Machine Learning</a>
+        <div>
+          <a href="/">{%- include logosvg-revert.html -%}</a>
+        </div>
         <p>{{- site.description | escape -}}</p>
       </div>
 
