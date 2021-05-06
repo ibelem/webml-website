@@ -2,7 +2,7 @@ title: Web Machine Learning
 email: anssi.kostiainen@__.com
 description: >
   Making Machine Learning a first-class web citizen
-baseurl: "website"
+baseurl: ""
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: webmachinelearning
 github_username:  webmachinelearning
