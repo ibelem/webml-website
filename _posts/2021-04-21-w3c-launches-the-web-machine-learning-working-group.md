@@ -2,10 +2,12 @@
 layout: post
 title:  "W3C Launches the Web Machine Learning Working Group"
 date:   2021-04-20 18:00:00 +0800
-categories: community
+categories: blog
+author: DOM
+avatar: https://avatars.githubusercontent.com/u/216410?v=4
 ---
 
-*This post is co-authored by Anssi Kostiainen (Working Group Chair), Ningxin Hu and Chai Chaoweeraprasit (Web Neural Network API Editors), and Ping Yu (TensorFlow.js Core team).*
+This post is co-authored by Anssi Kostiainen (Working Group Chair), Ningxin Hu and Chai Chaoweeraprasit (Web Neural Network API Editors), and Ping Yu (TensorFlow.js Core team).
 
 ## Introduction
 
@@ -14,7 +16,7 @@ https://www.w3.org/2004/01/pp-impl/130674/join
 
 Machine Learning (ML) is a branch of Artificial Intelligence. A subfield of ML called Deep Learning with its various neural network architectures enables new compelling user experiences for web applications. [Use cases](https://webmachinelearning.github.io/webnn/#usecases) range from improved video conferencing to accessibility-improving features, with potential improved privacy over cloud-based solutions. Enabling these use cases and more is the focus of the newly launched [Web Machine Learning Working Group](https://www.w3.org/groups/wg/webmachinelearning").
 
-![WebNN Logo](https://www.w3.org/blog/wp-content/uploads/2021/04/webnn.png)
+![WebNN Logo]({{ site.url }}/assets/images/webml-logo.png)
 
 ## Progress
 

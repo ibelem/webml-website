@@ -7,7 +7,7 @@
     justify-content: center;
 }
 
-.herobar {
+.herobar, .postlist {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -19,6 +19,7 @@
 .hb-item {
     display: flex;
     align-items: center;
+    padding-right: 6rem;
 }
 
 .gap {
@@ -30,7 +31,7 @@
 }
 
 #herosvg svg {
-    height: 400px;
+    height: 360px;
 }
 
 .buttons {
@@ -59,6 +60,7 @@
     margin: 0 0.5rem;
     width: 100px;
     text-align: center;
+    border: 1px solid $brand-color2;
 }
 
 .herobar .buttonwhite {
@@ -367,23 +369,7 @@ nav a {
     flex: 1;
     padding: 0.75rem 0;
 }
-
-//   .menu > ol > .menu-item:after {
-//     content: "";
-//     position: absolute;
-//     width: 4px;
-//     height: 4px;
-//     border-radius: 50%;
-//     bottom: 5px;
-//     left: calc(50% - 2px);
-//     background: $brand-color;
-//     will-change: transform;
-//     transform: scale(1);
-//     transition: transform 0.2s ease;
-//   }
-//   .menu > ol > .menu-item:hover:after {
-//     transform: scale(1);
-//   }
+ 
 .menu-item {
     position: relative;
     text-align: center;
@@ -400,6 +386,18 @@ nav a {
 
 .menu-item a:hover {
     color: $brand-color;
+}
+
+.arch {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". .";
+    align-items: center;
+    justify-content: center;
 }
 
 .faq {
@@ -677,6 +675,55 @@ nav a {
     display: block;
 }
 
+.postlist {
+    margin: 2rem 0;
+}
+
+.post {
+    margin-left: 1rem;
+}
+
+.posttitle {
+    margin-bottom: 1rem !important;
+}
+
+.posttitle + p {
+    height: 46px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.postlink {
+    font-size: 1.0rem;
+}
+
+.blflex {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.post p {
+    margin-bottom: 0;
+}
+
+.postimg {
+    position: relative;
+    display: block;
+    margin-right: 1rem;
+}
+
+.blflex img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.postauthor {
+    margin-bottom: 0;
+}
 
 @media screen and (max-width: 640px) {
 
@@ -710,7 +757,272 @@ nav a {
         padding: 0.6rem 1rem;
         width: 100px;
     }
+}
 
+.menu-item:hover>.sub-menu {
+    display: block;
+}
+
+@media screen and (max-width: 640px) {
+    .herobar {
+        margin-top: 80px;
+    }
+
+    .hb-item {
+        padding: 0;
+    }
+
+    #herosvg {
+        margin-top: 1rem;
+    }
+
+    #herosvg svg {
+        width: 90vw;
+    }
+
+    #herosvg,
+    #herosvg svg {
+        height: 280px;
+    }
+    .cap {
+        padding-bottom: 0 !important;
+    }
+    .moreitem {
+        margin: 0.5rem 0 !important;
+    }
+
+    .more {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 1fr 1fr 1fr !important;
+        grid-template-areas:
+        "."
+        "."
+        "." !important;
+        justify-content: space-between;
+    
+        &item {
+            padding: 1rem;
+            margin: 0 1rem;
+        }
+    }
+
+    .arch {
+        margin: 1rem 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "."
+            ".";
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .content .flex {
+        margin-left: 0 !important;
+    }
+
+    .adv .flex {
+        margin-right: 0.5rem !important;
+    }
+}
+
+@keyframes enter {
+    from {
+        opacity: 0;
+        transform: scaleY(0.98) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.adv {
+    background-color: rgba(242, 245, 251, 1);
+    margin: 2rem 0;
+    padding: 2rem 0 0 0;
+}
+
+
+.cap {
+    text-align: center;
+    padding-bottom: 0;
+}
+
+.title {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    color: $brand-color;
+    font-family: Poppins;
+}
+
+.subtitle {
+    color: $grey-color;
+    margin-top: -0.5rem;
+}
+
+.adv .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". ."
+      ". .";
+}
+
+.flex-shrink {
+    margin-top: 0.3rem;
+}
+
+.content .title {
+    font-size: 1.0rem;
+    color: $text-color;
+}
+
+.content .flex {
+    margin-left: 1rem;
+}
+
+.adv svg {
+    height: 2rem;
+    width: 2rem;
+    color: $brand-color;
+}
+
+.adv .flex {
+    display: flex;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.more {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . .";
+    justify-content: space-between;
+
+    &item {
+        background-color: $brand-bg;
+        padding: 1rem;
+        margin: 0 1rem;
+        text-align: left;
+
+        a {
+            display: block;
+            margin-top: 8px;
+            align-items: center;
+            display: inline-flex;
+            font-size: 0.7rem;
+        }
+    }
+
+    &image {
+        width: 100%;
+        border-radius: 50%;
+        max-width: 2.8rem;
+        border: 3px solid #fff;
+    }
+
+    &headline_user {
+        text-align: center;
+        margin: 1em 0 0 0;
+        position: relative;
+        font-size: 0.9rem;
+    }
+
+    &headline {
+        text-align: center;
+        margin: 0;
+        position: relative;
+        font-size: 0.7rem;
+    }
+
+    &subtext {
+        font-size: 0.8rem;
+    }
+}
+
+.more hr {
+    height: 24px;
+    width: 100%;
+    background: url("../images/home-leaf.gif") center no-repeat;
+    border: none;
+}
+
+.more .img {
+    text-align: center;
+}
+
+.more svg {
+    width: 12px;
+    height: 0.7rem;
+    margin-left: 4px;
+}
+
+.current {
+    color: $brand-color2 !important;
+}
+
+.typing-demo {
+    width: 27ch;
+    animation: typing 2s steps(27), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 1.2em;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+@media only screen 
+and (max-width: 640px),
+(min-device-width: 320px) 
+  and (max-device-width: 812px),
+(min-device-width: 768px) 
+  and (max-device-width: 1366px) {
+    .hb-item {
+        padding-right: 0;
+    }
+    #herosvg svg {
+        height: 280px;
+    }
+}
+
+
+@media only screen 
+and (max-width: 640px),
+(min-device-width: 320px) 
+  and (max-device-width: 812px),
+(min-device-width: 768px) 
+  and (max-device-width: 1366px) {
+    
     .sub-menu {
         border-radius: 0px;
         width: 99%;
@@ -743,7 +1055,7 @@ nav a {
     .burger-svg, .burger, .x {
         display: block;
     }
- 
+
     .menu {
         position: fixed;
         top: 0;
@@ -798,18 +1110,10 @@ nav a {
         animation-delay: 0.4s;
     }
 
-    // .menu>ol>.menu-item+.menu-item {
-    //     margin-top: 0.75rem;
-    // }
-
     .menu>ol>.menu-item:after {
         left: auto;
         right: 1rem;
         bottom: calc(50% - 2px);
-    }
-
-    .menu>ol>.menu-item:hover {
-        z-index: 1;
     }
 
     .menu:hover>ol {
@@ -818,214 +1122,5 @@ nav a {
 
     .menu:hover:after {
         box-shadow: none;
-    }
-
-}
-
-.menu-item:hover>.sub-menu {
-    display: block;
-}
-
-@media screen and (max-width: 640px) {
-    .herobar {
-        margin-top: 80px;
-    }
-
-    #herosvg {
-        margin-top: 1rem;
-    }
-
-    #herosvg svg {
-        width: 90vw;
-    }
-
-    #herosvg,
-    #herosvg svg {
-        height: 280px;
-    }
-    .cap {
-        padding-bottom: 0 !important;
-    }
-    .moreitem {
-        margin: 1em 0 !important;
-    }
-}
-
-@keyframes enter {
-    from {
-        opacity: 0;
-        transform: scaleY(0.98) translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: none;
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.adv {
-    background-color: rgba(242, 245, 251, 1);
-    margin: 2rem 0;
-    padding: 2rem 0 0 0;
-}
-
-
-.cap {
-    text-align: center;
-    padding-bottom: 0.5rem;
-}
-
-.title {
-    font-size: 1.2rem;
-    line-height: 1.2rem;
-    color: $brand-color;
-    font-family: Poppins;
-}
-
-.subtitle {
-    color: $grey-color;
-    margin-top: -0.5rem;
-}
-
-.adv .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      ". ."
-      ". .";
-}
-
-.flex-shrink {
-    margin-top: 0.3rem;
-}
-
-.content .title {
-    font-size: 1.0rem;
-    color: $text-color;
-}
-
-.adv svg {
-    height: 2rem;
-    width: 2rem;
-    color: $brand-color;
-}
-
-.adv .flex {
-    display: flex;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-}
-
-.more {
-    grid-column: 1 / -1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    &item {
-        background-color: $brand-bg;
-        padding: 1rem;
-        margin: 2em 0;
-        text-align: left;
-
-        a {
-            display: block;
-            color: #999;
-            margin-top: 8px;
-            align-items: center;
-            display: inline-flex;
-            font-size: 0.7rem;
-
-            &:hover {
-                color: $brand-color2;
-            }
-        }
-    }
-
-    &image {
-        width: 100%;
-        border-radius: 50%;
-        max-width: 2.8rem;
-        border: 3px solid #fff;
-    }
-
-    &headline_user {
-        text-align: center;
-        margin: 1em 0 0 0;
-        position: relative;
-        font-size: 0.9rem;
-    }
-
-    &headline {
-        text-align: center;
-        margin: 0;
-        position: relative;
-        font-size: 0.7rem;
-    }
-
-    &subtext {
-        font-size: 0.8rem;
-    }
-
-    @media (min-width: 900px) {
-        &item {
-            flex: 0 1 29%;
-            margin: 0;
-        }
-    }
-}
-
-.more hr {
-    height: 24px;
-    width: 100%;
-    background: url("../images/home-leaf.gif") center no-repeat;
-    border: none;
-}
-
-.more .img {
-    text-align: center;
-}
-
-.more svg {
-    width: 12px;
-    height: 0.7rem;
-    margin-left: 4px;
-}
-
-.current {
-    color: $brand-color2 !important;
-}
-
-.typing-demo {
-    width: 27ch;
-    animation: typing 2s steps(27), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    font-family: monospace;
-    font-size: 1.2em;
-}
-
-@keyframes typing {
-    from {
-        width: 0
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent
     }
 }

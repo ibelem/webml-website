@@ -79,13 +79,14 @@
 .site-footer a {
   color: $background-color;
   text-decoration: none;
+  border-bottom: 0;
+
 }
 
 .site-footer a:hover {
-  border-bottom: 0;
   color: #fff;
   text-decoration: none;
-  border-bottom: 1px dashed #fff;
+  border-bottom: 1px solid #fff;
 }
 
 .footer-col-wrapper {
@@ -290,39 +291,51 @@ fill: #fff;
 }
 
 .post-title {
-  @include relative-font-size(2.625);
+  @include relative-font-size(1.6);
   letter-spacing: -1px;
   line-height: 1;
 
   @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
+    @include relative-font-size(1.5);
   }
+}
+
+.post-content h2, .post-content h3 {
+  margin-top: 1rem;
+}
+
+.post-content p, .post-content blockquote {
+  margin: 1rem 0;
+}
+
+.post-content blockquote p {
+  margin: 0.2rem 0;
 }
 
 .post-content {
   margin-bottom: $spacing-unit;
 
   h2 {
-    @include relative-font-size(2);
+    @include relative-font-size(1.6);
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.75);
+      @include relative-font-size(1.5);
     }
   }
 
   h3 {
-    @include relative-font-size(1.625);
+    @include relative-font-size(1.3);
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.375);
+      @include relative-font-size(1.1);
     }
   }
 
   h4 {
-    @include relative-font-size(1.25);
+    @include relative-font-size(1);
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.125);
+      @include relative-font-size(1);
     }
   }
 }
