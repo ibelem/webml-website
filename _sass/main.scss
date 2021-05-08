@@ -400,6 +400,14 @@ nav a {
     justify-content: center;
 }
 
+.arch ul {
+    margin: 2rem;
+}
+
+.arch ul li {
+    list-style-type: circle;
+}
+
 .faq {
     background-color: $faq-color;
     color: #fff !important;
@@ -714,11 +722,10 @@ nav a {
 }
 
 .blflex img {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 9999px;
-    object-fit: cover;
-    border: 2px solid #fff;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
 }
 
 .postauthor {
@@ -806,8 +813,8 @@ nav a {
         }
     }
 
-    .arch {
-        margin: 1rem 0;
+    .arch, .postlist {
+        margin: 0rem 0;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -816,6 +823,10 @@ nav a {
             ".";
         align-items: center;
         justify-content: center;
+    }
+
+    .post {
+        margin-bottom: 1rem;
     }
     
     .content .flex {
@@ -941,7 +952,7 @@ nav a {
 
     &headline_user {
         text-align: center;
-        margin: 1em 0 0 0;
+        margin: 0.5rem 0 0 0;
         position: relative;
         font-size: 0.9rem;
     }
