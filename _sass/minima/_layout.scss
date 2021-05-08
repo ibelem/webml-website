@@ -250,8 +250,33 @@ fill: #fff;
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
-  flex: 1;
+  margin: 2rem auto;
+}
+
+.postdetail {
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". .";
+  align-items:flex-start;
+}
+
+.postdetail article + ul {
+  margin-left: 1rem;
+  list-style: none;
+  position: sticky;
+  top: 120px;
+}
+
+.postdetail article + ul li ul {
+  margin-left: 1rem;
+}
+
+.postdetailarticle + ul li ul li {
+  padding: 4px 0;
 }
 
 .page-heading {
@@ -276,9 +301,13 @@ fill: #fff;
   color: $grey-color;
 }
 
+.post-list li h3 {
+  margin-bottom: 5px;
+}
+
 .post-link {
-  display: block;
-  @include relative-font-size(1.5);
+  display: inline-block;
+  font-size: 1.2rem;
 }
 
 
@@ -306,6 +335,11 @@ fill: #fff;
 
 .post-content p, .post-content blockquote {
   margin: 1rem 0;
+}
+
+.post-content img {
+  display: block;
+  margin: 0 auto;
 }
 
 .post-content blockquote p {

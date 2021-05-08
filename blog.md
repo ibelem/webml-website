@@ -4,10 +4,3 @@
 
 layout: blog
 ---
-
-<div class="hero">
-    <div class="typing-demo">
-      Hello Web Machine Learning.
-    </div>
-</div>
-

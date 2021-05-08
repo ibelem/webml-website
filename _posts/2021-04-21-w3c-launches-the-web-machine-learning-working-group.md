@@ -16,7 +16,7 @@ https://www.w3.org/2004/01/pp-impl/130674/join
 
 Machine Learning (ML) is a branch of Artificial Intelligence. A subfield of ML called Deep Learning with its various neural network architectures enables new compelling user experiences for web applications. [Use cases](https://webmachinelearning.github.io/webnn/#usecases) range from improved video conferencing to accessibility-improving features, with potential improved privacy over cloud-based solutions. Enabling these use cases and more is the focus of the newly launched [Web Machine Learning Working Group](https://www.w3.org/groups/wg/webmachinelearning").
 
-![WebNN Logo]({{ site.url }}/assets/images/webml-logo.png)
+![WebNN Logo]({{ '/assets/images/webml-logo-sm.png' | relative_url }})
 
 ## Progress
 
