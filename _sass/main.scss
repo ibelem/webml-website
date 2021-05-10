@@ -422,14 +422,16 @@ nav a {
 
 .sub-menu {
     border-radius: 3px;
-    border: 1px solid rgba(200, 200, 200, 0.5);
     position: absolute;
     width: 100%;
     top: 100%;
     left: 0;
     display: none;
     z-index: 10005;
+    border-radius: 3px;
+    border: 1px solid rgba(200, 200, 200, 0.5);
     box-shadow: 2px 2px 10px 0px rgba(200, 200, 200, 0.25);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .sub-menu:before {
@@ -449,7 +451,6 @@ nav a {
 .sub-menu .menu-item {
     padding: 0.5rem 0;
     opacity: 0;
-    background: rgba(240, 240, 240, 0.8);
     transform-origin: bottom;
     animation: enter 0.2s ease forwards;
 }
@@ -560,33 +561,27 @@ nav a {
         right: 0px;
         z-index: 10002;
     }
-}
 
-.burger,
-.x,
-.active .x {
-    filter: url(#gooeyness);
-    display: inline-block;
-    height: 60px;
-    position: absolute;
-    width: 60px;
-    top: 0px;
-    right: 0px;
-    z-index: 10002;
-}
+    .menu {
+        position: fixed;
+        top: 12px;
+        right: 58px;
+        left:auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: 10001;
+        display: none;
+    }
 
-.active .menu {
-    display: block;
-}
-
-.active .menu>ol {
-    z-index: 10000;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    animation: fade 0.2s ease-out;
+    .active .menu>ol {
+        z-index: 10000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 50vw !important;
+        animation: fade 0.2s ease-out;
+        border: 1px solid $brand-color;
+    }
 }
 
 .x {
@@ -701,6 +696,7 @@ nav a {
 
 .posttitle {
     margin-bottom: 1rem !important;
+    font-family: Poppins;
 }
 
 .posttitle+p {
@@ -1043,18 +1039,31 @@ nav a {
     #herosvg svg {
         height: 280px;
     }
-}
 
+    .burger,
+    .x,
+    .active .x {
+        filter: url(#gooeyness);
+        display: inline-block;
+        height: 60px;
+        position: absolute;
+        width: 60px;
+        top: 0px;
+        right: 0px;
+        z-index: 10002;
+    }
 
-@media only screen and (max-width: 640px),
-(min-device-width: 320px) and (max-device-width: 812px),
-(min-device-width: 768px) and (max-device-width: 1366px) {
+    .active .menu {
+        display: block;
+    }
 
     .sub-menu {
         border-radius: 0px;
         width: 99%;
         position: static;
         display: block;
+        background: transparent;
+        border: 0px solid rgba(200, 200, 200, 0.5);
         box-shadow: 0px 0px 0px 0px rgba(200, 200, 200, 0.25);
     }
 
@@ -1067,12 +1076,15 @@ nav a {
     }
 
     .sub-menu .menu-item {
-        background: $brand-color2;
         padding: 0.5rem 0;
     }
 
+    .menu ol li ol.sub-menu .menu-item:first-child {
+        padding-bottom: 0.5rem !important;
+    }
+
     .sub-menu .menu-item a {
-        color: #fff;
+        color: $brand-color;
     }
 
     .sub-menu:before {
@@ -1087,7 +1099,7 @@ nav a {
 
     .menu {
         position: fixed;
-        top: 0;
+        top: 62px;
         left: 0;
         background-color: rgba(255, 255, 255, 0.9);
         z-index: 10001;
@@ -1103,20 +1115,17 @@ nav a {
         display: inline-block;
         opacity: 0;
         animation: enter 0.3s ease-out forwards;
-        border: 1px solid rgba(255, 255, 255, 1.0);
-        background-color: $brand-color;
         z-index: 10000;
-        width: 50vw;
         padding: 0.5rem 0;
-        box-shadow: 2px 2px 10px 0px rgba(200, 200, 200, 0.25);
     }
 
     .faq {
         background-color: transparent;
+        color: $brand-color !important;
     }
 
     .menu-item a {
-        color: #fff;
+        color: $brand-color
     }
 
     .menu>ol>.menu-item:nth-child(1) {
@@ -1152,4 +1161,29 @@ nav a {
     .menu:hover:after {
         box-shadow: none;
     }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px),
+(min-device-width: 768px) and (max-device-width: 1366px) {
+    .menu {
+        position: fixed;
+        top: 12px;
+        right: 58px;
+        left:auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: 10001;
+        display: none;
+    }
+
+    .active .menu>ol {
+        z-index: 10000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 30vw;
+        animation: fade 0.2s ease-out;
+        border: 1px solid $brand-color;
+    }
+
 }

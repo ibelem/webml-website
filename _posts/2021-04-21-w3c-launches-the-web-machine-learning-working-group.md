@@ -3,7 +3,7 @@ layout: post
 title:  "W3C Launches the Web Machine Learning Working Group"
 date:   2021-04-20 18:00:00 +0800
 categories: blog
-author: DOM
+author: Dominique Hazaël-Massieux
 avatar: https://avatars.githubusercontent.com/u/216410?v=4
 ---
 
@@ -43,6 +43,9 @@ W3C organized a [workshop on Web and Machine Learning](https://www.w3.org/2020/0
 The [Web Machine Learning Working Group](https://www.w3.org/groups/wg/webmachinelearning) plans to publish the First Public Working Draft of the Web Neural Network API during the first half of 2021 and welcomes new participants from the diverse W3C community to take part in helping identify new use cases, documenting ethical risks and their mitigations, contributing to technical work, conducting wide reviews in privacy, security, accessibility, and other important areas to ensure the perspectives of the diverse web community are heard. &#8211; which given some of the ethical impact of Machine Learning algorithms will be particularly critical to the work of the group. Join us!
 
 We would like to thank all the W3C Community Group and W3C workshop participants for their contributions that have helped shape this work, and W3C for providing a venue to advance this cross-industry effort toward wide adoption.
+
+
+> Source: [W3C Launches the Web Machine Learning Working Group](https://www.w3.org/blog/2021/04/w3c-launches-the-web-machine-learning-working-group/)
 			
 
 
