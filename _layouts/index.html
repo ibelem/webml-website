@@ -10,9 +10,8 @@
   <main>
 
     <div class="wrapper">
-      {{ content }}
 
-      <div class="herobar">
+      <div class="herobar my">
         <div class="hb-item">
           <div class="titleeffect">
             <div class="box">
@@ -35,7 +34,9 @@
 
           </div>
         </div>
-        {%- include webnn-herosvg.html -%}
+        <!-- {%- include webnn-herosvg.html -%} -->
+        {{ content }}
+
       </div>
     </div>
 
@@ -49,6 +50,7 @@
   </main>
 
   {%- include footer.html -%}
+  {%- include script.html -%}
 
 </body>
 

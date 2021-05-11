@@ -6,7 +6,7 @@ layout: index
 ---
 
 <div class="hero">
-    <div class="typing-demo">
+    <div class="typing">
       Hello Web Machine Learning.
     </div>
 </div>
