@@ -2,13 +2,12 @@
 layout: post
 title: 'Call for Participation in Machine Learning for the Web Community Group'
 date: 2018-10-03 20:42:03 +0800
-categories: blog
 author: W3C Team
 avatar: https://avatars.githubusercontent.com/u/379216?s=200&v=4
+categories: blog
 ---
 
-The Machine Learning for the Web Community Group (https://www.w3.org/community/webmachinelearning) has been launched:
-
+The [Machine Learning for the Web Community Group](https://www.w3.org/community/webmachinelearning) has been launched.
 
 The mission of the Machine Learning for the Web Community Group (WebML CG) is to make Machine Learning a first-class web citizen by incubating and developing a dedicated low-level Web API for machine learning inference in the browser. Please see the [charter](https://webmachinelearning.github.io/charter) for more information.
 

@@ -107,11 +107,11 @@ a {
   color: $brand-color;
   padding: 1px 0;
   text-decoration: none;
-  border-bottom: dashed 1px $brand-color;
+  
 
   &:hover {
-    color: $brand-color2;
-    border-bottom: solid 1px $brand-color2;
+    color: $brand-color;
+    border-bottom: solid 1px $brand-color;
   }
 
   &:hover .svg-icon {
@@ -144,7 +144,9 @@ blockquote {
   }
 }
 
-
+pre, code {
+  max-width: 580px;
+}
 
 /**
  * Code formatting
@@ -161,13 +163,14 @@ code {
 
 pre {
   padding: 8px 12px;
-  overflow-x: auto;
+  // overflow-x: auto;
   margin: 1rem 0;
 
   > code {
     border: 0;
     padding-right: 0;
     padding-left: 0;
+    font-size: 0.7rem;
   }
 }
 

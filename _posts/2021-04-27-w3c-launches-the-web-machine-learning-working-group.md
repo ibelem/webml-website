@@ -2,9 +2,9 @@
 layout: post
 title:  "W3C Launches the Web Machine Learning Working Group"
 date:   2021-04-27 18:00:00 +0800
-categories: blog
 author: Anssi Kostiainen
 avatar: https://avatars.githubusercontent.com/u/765510?s=120&v=4
+categories: blog
 ---
 
 🌱 This [W3C Community Group](https://www.w3.org/community/webmachinelearning/) started incubating work in 2018 for a possible Web Neural Network API, in response to encouraging feedback from a [TPAC breakout session](https://www.w3.org/2018/10/24-webmachinelearning-minutes.html). Starting October 2018, this Community Group identified key use cases working with diverse participants including major browser vendors, key ML JS frameworks, interested hardware vendors, web developers, and started drafting the Web Neural Network API specification.

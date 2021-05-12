@@ -75,13 +75,13 @@
 
   .webgpu:hover ~ .gpuline,
   .webgpu:hover ~ .gpupath {
-    stroke: darken($faq-color, 10%);;
+    stroke: darken($faq-color, 10%);
     animation: 0.5s draw linear forwards;
   }
 
   .webgpu:hover ~ .gpu,
   .webgpu:hover ~ .gputext {
-    fill: darken($faq-color, 10%);;
+    fill: darken($faq-color, 10%);
   }
 
   .webassembly:hover ~ .wasmline,

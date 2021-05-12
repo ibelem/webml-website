@@ -2,13 +2,13 @@
 layout: post
 title: 'Call for Review: Web Machine Learning WG Charter'
 date: 2021-02-25 20:42:03 +0800
-categories: blog
 author: Xueyuan Jia
 avatar: https://avatars.githubusercontent.com/u/379216?s=200&v=4
+categories: blog
 ---
 
 Today W3C Advisory Committee Representatives received a Proposal
-to review a [draft charter](https://www.w3.org/2021/02/proposed-machine-learning-charter.html) for the Web Machine Learning Working Group:
+to review a [draft charter](https://www.w3.org/2021/02/proposed-machine-learning-charter.html) for the Web Machine Learning Working Group.
 
 As part of ensuring that the community is aware of proposed work
 at W3C, this draft charter is public during the Advisory

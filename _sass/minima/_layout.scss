@@ -88,7 +88,6 @@
   width: 80%;
   text-decoration: none;
   color: #fff;
-  padding-left: 6px;
   position: relative;
   border-bottom: 0px dashed #fff !important;
 }
@@ -104,7 +103,7 @@
     content: " ";
     position: absolute;
     top: 24px;
-    left: 6px;
+    left: 0px;
     transition: center 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   
@@ -117,14 +116,14 @@
       content: " ";
       position: absolute;
       top: 24px;
-      left: 6px;
+      left: 0px;
     }
   }
 }
 
 .followus {
   text-align: left;
-  padding-left: 6px;
+  padding-left: 0px;
 }
 
 .followus a:hover {
@@ -219,22 +218,45 @@ fill: #fff;
   gap: 0px 0px;
   grid-template-areas:
     ". .";
+  // display: grid;
+  // grid-template-columns: 1fr 3fr 1fr;
+  // grid-template-rows: 1fr;
+  // gap: 0px 0px;
+  // grid-template-areas:
+  //   ". . .";
   align-items:flex-start;
 }
 
-.postdetail article + ul {
+.tocblock {
   margin-left: 1rem;
-  list-style: none;
   position: sticky;
   top: 120px;
 }
 
-.postdetail article + ul li ul {
-  margin-left: 1rem;
+.tocblock span {
+  text-transform: uppercase;
+  font-size: 0.75rem;
 }
 
-.postdetailarticle + ul li ul li {
-  padding: 4px 0;
+.toc {
+  list-style: none;
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid #f2f5fb;
+}
+
+.toc ul {
+  border-left: 1px solid #f2f5fb;
+}
+
+.toc li {
+  margin: 0.3rem auto;
+  margin-left: 0.5rem;
+  list-style-type: none;
+}
+
+.toc li ul {
+  padding-left: 0.5rem;
 }
 
 .page-heading {
@@ -256,7 +278,7 @@ fill: #fff;
 
 .post-meta {
   font-size: $small-font-size;
-  color: $brand-color;
+  color: $grey-color;
   text-align: center;
 }
 
@@ -279,9 +301,9 @@ fill: #fff;
 }
 
 .post-title {
-  font-size: 1.5rem;
-  margin-bottom: -0.2rem;
-  color: $brand-color;
+  font-size: 1.2rem;
+  margin-bottom: 0rem;
+  color: $grey-color;
   font-family: Poppins;
   text-align: center;
 
@@ -293,7 +315,7 @@ fill: #fff;
 .post-content h2, .post-content h3, .post-content h4  {
   margin-top: 1rem;
   font-family: Poppins;
-  color: $brand-color;
+  color: $grey-color;
 }
 
 .post-content p, .post-content blockquote {
@@ -313,14 +335,18 @@ fill: #fff;
   margin-bottom: $spacing-unit;
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   h3 {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
   }
 
   h4 {
     font-size: 1.0rem;
+  }
+
+  #quotes {
+    font-style: italic;
   }
 }
