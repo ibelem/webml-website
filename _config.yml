@@ -13,6 +13,7 @@ google_analytics: UA-147662084-1
 theme: minima
 plugins:
   - jekyll-feed
+excerpt_separator: <!-- more -->
 
 host: 0.0.0.0
 

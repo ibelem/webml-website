@@ -84,6 +84,16 @@ table th {
     color: rgba(255, 255, 255, 0.8);
 }
 
+.bloglist #archives {
+    margin-left: 1rem;
+    position: sticky;
+    top: 120px;
+}
+
+.bloglist .category-head {
+    margin-top: 0;
+}
+
 #archives ul {
     list-style: none;
     margin: 0;
@@ -421,7 +431,7 @@ table th {
 }
 
 .postlink {
-    font-size: 1.0rem;
+    font-size: 1.2rem;
 }
 
 .blflex {
@@ -432,6 +442,12 @@ table th {
 
 .post p {
     margin-bottom: 0;
+}
+
+.post p img {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }
 
 .postimg {

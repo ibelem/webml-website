@@ -18,6 +18,8 @@ W3C invites public comments through 03:59 UTC on 2021-03-27
 (23:59, Eastern time on 2021-03-26) on the proposed charter.
 Please send comments to public-new-work@w3.org, which has a public archive [lists.w3.org/Archives/Public/public-new-work](http://lists.w3.org/Archives/Public/public-new-work/).
 
+<!-- more -->
+
 Other than comments sent in formal responses by W3C Advisory
 Committee Representatives, W3C cannot guarantee a response to
 comments. If you work for a W3C Member [1], please coordinate

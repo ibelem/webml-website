@@ -8,8 +8,6 @@ categories: blog
 categories: doc
 ---
 
-# WebNN-native
-
 WebNN-native is a native implementation of the [Web Neural Network API](https://webmachinelearning.github.io/webnn/).
 
 It provides several building blocks:
@@ -23,6 +21,8 @@ It provides several building blocks:
    - **oneDNN** on Windows 10 and Linux
    - **XNNPACK** on Windows 10 and Linux
    - _Other backends are to be added_
+
+<!-- more -->
 
 WebNN-native uses the code of other open source projects:
 

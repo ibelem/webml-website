@@ -312,11 +312,12 @@ fill: #fff;
   }
 }
 
-.post-content h2, .post-content h3, .post-content h4  {
+.post-content h2, .post-content h3, .post-content h4, .bloglist h2, .bloglist h3, .bloglist h4  {
   margin-top: 1rem;
   font-family: Poppins;
-  color: $grey-color;
 }
+
+
 
 .post-content p, .post-content blockquote {
   margin: 1rem 0;

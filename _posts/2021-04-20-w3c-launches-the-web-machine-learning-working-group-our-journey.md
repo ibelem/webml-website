@@ -17,6 +17,8 @@ Machine Learning (ML) is a branch of Artificial Intelligence. A subfield of ML c
 
 While some of these use cases can be implemented in-device in a constrained manner with existing Web APIs (e.g. WebGL graphics API or in the future [WebGPU](https://gpuweb.github.io/gpuweb/), the lack of access to platform capabilities such as dedicated ML hardware accelerators and native instructions constraint the scope of experiences and leads to inefficient implementations on modern hardware.
 
+<!-- more -->
+
 With these design goals in mind, a [W3C Community Group](https://www.w3.org/community/webmachinelearning/) started incubating work in 2018 for a possible Web Neural Network API, in response to encouraging feedback from a [TPAC breakout session](https://www.w3.org/2018/10/24-webmachinelearning-minutes.html). Starting October 2018, this Community Group identified key use cases working with diverse participants including major browser vendors, key ML JS frameworks, interested hardware vendors, and web developers. After identification of the key use cases, the group decomposed the key use cases into requirements and started drafting the [Web Neural Network API specification](https://webmachinelearning.github.io/webnn) in mid-2019. The aim of this use case-driven design process was to put user needs first.
 
 ### Quotes 
