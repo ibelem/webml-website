@@ -9,7 +9,7 @@ layout: doclist
     <h3 class="category-head">{{ category_name }}</h3>
     <ul>
       {% for post in site.categories[category_name] %}
-      <li><a class="archive-item" href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
+      <li><a class="archive-item" href="{{ post.url | relative_url }}">{{post.title}}</a></li>
       {% endfor %}
     </ul>
   </div>

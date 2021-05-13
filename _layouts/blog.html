@@ -19,9 +19,9 @@ layout: bloglist
           <div>
             <!-- {{ post.excerpt | strip_html | truncate: 500 }} -->
             {% if post.content contains "<!-- more -->" %}
-            {{ post.content | split:"<!-- more -->" | first % }}
+            {{ post.content | split:"<!-- more -->" | first }}
               <div style="text-align:right;">
-                <a href="{{ post.url }}"> Read More</a>
+                <a href="{{ post.url | relative_url }}"> Read More</a>
               </div>
             {% else %}
               {{ post.content }}
@@ -47,7 +47,7 @@ layout: bloglist
         <h3 class="category-head">{{ category_name }}</h3>
         <ul>
           {% for post in site.categories[category_name] %}
-          <li><a class="archive-item" href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
+          <li><a class="archive-item" href="{{ post.url | relative_url }}">{{post.title}}</a></li>
           {% endfor %}
         </ul>
         {% endif %}
