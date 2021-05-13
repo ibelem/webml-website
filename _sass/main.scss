@@ -28,6 +28,16 @@
     align-items: flex-start;
 }
 
+.l1r4 {
+    margin: 0rem auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: ". .";
+    align-items: flex-start;
+}
+
 .post-nav {
     margin-top: 1rem;
     display: flex;
@@ -36,6 +46,10 @@
 .post-nav div {
     /* flex-grow, flex-shrink, flex-basis */
     flex: 1 1 0;
+    height: 1.2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .post-nav-next {
@@ -85,7 +99,6 @@ table th {
 }
 
 .bloglist #archives {
-    margin-left: 1rem;
     position: sticky;
     top: 120px;
 }
@@ -407,10 +420,6 @@ table th {
     list-style-type: circle;
 }
 
-.postlist {
-    margin: 2rem 0;
-}
-
 .post {
     margin-left: 1rem;
 }
@@ -422,6 +431,9 @@ table th {
 .posttitle {
     margin-bottom: 0.5rem !important;
     font-family: Poppins;
+    line-height: 1.4rem;
+    height: 1.4rem;
+    overflow: hidden;
 }
 
 .posttitle+p {
@@ -508,12 +520,17 @@ table th {
         margin-left: 0rem;
     }
 
+    pre, code {
+        overflow: hidden;
+        max-width: 99.5vw;
+    }
+
     .bloglist #archives {
         margin-left: 0;
     }
 
     .page-content {
-        margin: 2rem 0 1rem 0;
+        margin: 2rem 0 0rem 0;
     }
 
 }
@@ -573,17 +590,13 @@ table th {
     }
 
     .arch,
-    .postlist{
-        margin: 0rem 0;
-        // display: grid;
-        // grid-template-columns: 1fr;
-        // grid-template-rows: 1fr 1fr;
-        // grid-template-areas:
-        //     "."
-        //     ".";
-        // align-items: center;
-        // justify-content: center;
+    .l1r4 {
+        margin: 0;
         display: block;
+    }
+
+    .l1r4 #archives {
+        margin-bottom: 2rem;
     }
 
     .gr {
@@ -801,11 +814,31 @@ table th {
     #herosvg svg {
         height: 280px;
     }
+
+    .bloglist #archives {
+        top: 0px;
+        position: static;
+    }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 812px),
 (min-device-width: 768px) and (max-device-width: 1366px) {
-    .bloglist #archives {
-        top: 0px;
+    pre, code {
+        overflow: hidden;
+    }
+
+    .tocblock {
+        margin-left: 1rem;
+        top: 0;
+    }
+
+    .l1r4 {
+        margin: 1rem auto;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas: ". .";
+        align-items: flex-start;
     }
 }

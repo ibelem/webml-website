@@ -238,24 +238,26 @@ fill: #fff;
   font-size: 0.75rem;
 }
 
-.toc {
+#toc {
   list-style: none;
   font-size: 0.8rem;
   padding-left: 0.5rem;
   border-left: 1px solid #f2f5fb;
+  margin: 0;
 }
 
-.toc ul {
+#toc ul {
   border-left: 1px solid #f2f5fb;
+  margin: 0; 
 }
 
-.toc li {
+#toc li {
   margin: 0.3rem auto;
   margin-left: 0.5rem;
   list-style-type: none;
 }
 
-.toc li ul {
+#toc li ul {
   padding-left: 0.5rem;
 }
 

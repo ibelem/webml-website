@@ -10,7 +10,23 @@ layout: bloglist
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-  <div class="postlist">
+  <div class="l1r4">
+    <div id="archives">
+      {% for category in site.categories %}
+      <div class="archive-group">
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        {% if category_name == "blog" %}
+        <h3 class="category-head">{{ category_name }}</h3>
+        <ul>
+          {% for post in site.categories[category_name] %}
+          <li><a class="archive-item" href="{{ post.url | relative_url }}">{{post.title}}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      
+      {% endfor %}
+    </div>
     <div>
       {%- for post in site.posts -%}
       <div class="post">
@@ -38,22 +54,6 @@ layout: bloglist
           </div> -->
       </div>
       {%- endfor -%}
-    </div>
-    <div id="archives">
-      {% for category in site.categories %}
-      <div class="archive-group">
-        {% capture category_name %}{{ category | first }}{% endcapture %}
-        {% if category_name == "blog" %}
-        <h3 class="category-head">{{ category_name }}</h3>
-        <ul>
-          {% for post in site.categories[category_name] %}
-          <li><a class="archive-item" href="{{ post.url | relative_url }}">{{post.title}}</a></li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-      </div>
-      
-      {% endfor %}
     </div>
   </div>
   {%- endif -%}

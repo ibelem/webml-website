@@ -4,8 +4,8 @@ title:  "WebNN-Native Build and Run"
 date:   2021-03-25 18:00:00 +0800
 author: Ningxin, Junwei, Bruce and Mingming
 avatar: https://avatars.githubusercontent.com/u/1531742?v=4
-categories: blog
 categories: doc
+toc: true
 ---
 
 WebNN-native is a native implementation of the [Web Neural Network API](https://webmachinelearning.github.io/webnn/).
