@@ -8,11 +8,10 @@
   {%- include header.html -%}
 
   <main class="wrapper postdetail" aria-label="Content">
-    {{ content }}
+    {{ content | inject_anchors }}
 
     <div class="tocblock">
-      <span>table of content</span>
-      {% toc %}
+      {{ content | toc_only }}
     </div>
 
   </main>
