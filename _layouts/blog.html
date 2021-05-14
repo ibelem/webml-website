@@ -4,7 +4,7 @@ layout: bloglist
 
 <div class="bloglist">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+  <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
@@ -24,26 +24,31 @@ layout: bloglist
         </ul>
         {% endif %}
       </div>
-      
+
       {% endfor %}
     </div>
     <div>
       {%- for post in site.posts -%}
       <div class="post">
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <p class="posttitle"><a class="postlink" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></p>
-          <div>
-            <!-- {{ post.excerpt | strip_html | truncate: 500 }} -->
-            {% if post.content contains "<!-- more -->" %}
-            {{ post.content | split:"<!-- more -->" | first }}
-              <div style="text-align:right;">
-                <a href="{{ post.url | relative_url }}"> Read More</a>
-              </div>
-            {% else %}
-              {{ post.content }}
-            {% endif %}
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <p class="posttitle"><a class="postlink" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></p>
+        <div>
+          <!-- {{ post.excerpt | strip_html | truncate: 500 }} -->
+          {% if post.content contains "<!-- more -->" %}
+          {{ post.content | split:"<!-- more -->" | first }}
+          <div style="text-align:right;">
+            <a href="{{ post.url | relative_url }}"> Read More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-4 h-4" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
           </div>
-          <!-- <div class="blflex">
+          {% else %}
+          {{ post.content }}
+          {% endif %}
+        </div>
+        <!-- <div class="blflex">
               <span class="postimg">
                   <img alt="profile" src="{{ post.avatar }}">
               </span>

@@ -32,7 +32,11 @@
   text-align: center;
 }
 
- 
+.headbg {
+  background: $brand-bg;
+  margin: 1rem auto;
+  padding: 2rem 0;
+}
 
 .site-footer a {
   color: $background-color;
