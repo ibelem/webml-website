@@ -7,10 +7,11 @@
 
   {%- include header.html -%}
 
-  <main class="page-content wrapper doc more" aria-label="Content">
+  <main class="page-content wrapper doc" aria-label="Content">
       {% for category in site.categories %}
+      {% capture category_name %}{{ category | first }}{% endcapture %}
+      {% if category_name == 'get-started' %}
       <div class="archive-group">
-        {% capture category_name %}{{ category | first }}{% endcapture %}
         <h3 class="category-head">{{ category_name }}</h3>
         <ul>
           {% for post in site.categories[category_name] %}
@@ -18,6 +19,7 @@
           {% endfor %}
         </ul>
       </div>
+      {% endif %}
       {% endfor %}
   </main>
 

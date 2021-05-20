@@ -108,8 +108,23 @@ $black: #000;
 	transform: rotateY(0deg) rotate(-45deg);
 }
 
+@keyframes zoomin {
+    0% {
+       background-size: 100%; 
+    }
+    100% {
+       background-size: 150%; 
+    }
+
+}
+
 #bg_ce {
 	background: url("../images/webnnsamples/codeeditor.jpg") center / cover no-repeat;
+}
+
+.cardwrapper:hover {
+	animation: zoomin 5s linear;
+    background-size: 150%;
 }
 
 #bg_ic {

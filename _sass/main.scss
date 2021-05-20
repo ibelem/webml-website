@@ -17,6 +17,10 @@
         ". .";
 }
 
+.modelloader {
+    display: block !important;
+    text-align: center;
+}
 
 .postlist {
     margin: 2rem auto;
@@ -56,12 +60,113 @@
     text-align: right;
 }
 
-.post svg {
+.post svg, .community a svg {
     width: 1rem;
     height: 1rem;
     margin-left: 2px;
     margin-bottom: -3px;
     transform: rotateY(0deg) rotate(-45deg);
+}
+
+
+.community {
+    gap: 1rem;
+}
+
+.community .moreitem {
+    margin: 0;
+}
+
+.community svg {
+    width: 1rem;
+}
+
+.community ul {
+    margin: 1rem 0 1rem 1rem;
+}
+
+.community ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0.2rem 0;
+}
+
+.community ul li svg {
+    margin-right: 0.5rem;
+}
+
+.bgr {
+    background: linear-gradient(-45deg,$brand-color2,$brand-color);
+    color: white;
+}
+
+.community .box {
+    padding: 1rem;
+    border: 1px solid #efefef;
+}
+
+
+.community h3 {
+    margin-bottom: 2px;
+}
+
+.community .moreitem h3 {
+    margin-top: -0.5rem;    
+}
+
+.community .moreitem div {
+    min-height: 2rem;
+}
+
+.community .moreitem ul {
+    margin: 1rem 0 0 0;
+}
+
+.community .moreitem svg {
+    height: 0.7rem;
+    margin-left: 4px;
+}
+
+.community li a {
+    margin-top: 0px;
+    align-items: center;
+    display: inline-flex;
+    font-size: 0.9rem;
+}
+
+.community .box p {
+    margin-bottom: 0;
+}
+
+.community .learn {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.community .moreitem h3 a {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.community figure {
+    margin: 1rem 0 0 0;
+    overflow: hidden;
+}
+
+.fx {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.fx svg {
+    margin-right: 0.5rem;
+    width: 16px !important;
+}
+
+.fx p {
+    margin-bottom: 0;
 }
 
 .post ul,
@@ -104,6 +209,14 @@ table th {
     line-height: 1rem;
     margin: 0.5rem auto;
     color: rgba(255, 255, 255, 0.8);
+}
+
+.doc .category-head {
+    color: $grey-color;
+}
+
+.doc ul li {
+    list-style: none;
 }
 
 .bloglist #archives {
@@ -541,15 +654,49 @@ table th {
         margin: 2rem 0 0rem 0;
     }
 
+    .community {
+        display: block !important;
+    }
+
+    .community ul {
+        margin: 0.5rem;
+    }
 }
 
 .menu-item:hover>.sub-menu {
     display: block;
 }
 
+.c4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: ". . . .";
+    align-items: center;
+}
+
+.c4 svg {
+    height: 0.7rem;
+    margin-right: 4px;
+}
+
+ul.c4 {
+    padding: 1rem 0;
+}
+
+ul.c4 li {
+    list-style: none;
+    align-items: center;
+}
+
 @media screen and (max-width: 640px) {
     .herobar {
         margin-top: 80px;
+    }
+
+    .modelloader {
+        margin: 2rem 0 !important;
     }
 
     .hb-item {
@@ -605,7 +752,7 @@ table th {
     .arch,
     .l1r4 {
         margin: 0;
-        display: block;
+        display: block !important;
     }
 
     .l1r4 #archives {
@@ -845,6 +992,16 @@ table th {
         top: 0px;
         position: static;
     }
+
+    .fx {
+        padding: 0 0.5rem;
+    }
+
+    .c4 {
+        display: block;
+        margin: 0 0.5rem;
+    }
+
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 812px),
@@ -867,10 +1024,10 @@ table th {
         grid-template-areas: ". .";
         align-items: flex-start;
     }
-    .g3 {
+    .more, .g3 {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-        gap: 0px 0px;
+        gap: 1rem 0px;
         grid-template-areas:
             ". . ";
     }

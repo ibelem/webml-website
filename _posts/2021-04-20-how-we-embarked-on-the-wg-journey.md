@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "W3C Launches the Web Machine Learning WG (Our Journey)"
+title:  "How We Embarked on the WG Journey"
 date:   2021-04-20 18:00:00 +0800
 author: Dominique Hazaël-Massieux
 avatar: https://avatars.githubusercontent.com/u/216410?v=4
@@ -45,6 +45,9 @@ We would like to thank all the W3C Community Group and W3C workshop participants
 *This post is co-authored by Anssi Kostiainen (Working Group Chair), Ningxin Hu and Chai Chaoweeraprasit (Web Neural Network API Editors), and Ping Yu (TensorFlow.js Core team).*
 
 *Source: [W3C Launches the Web Machine Learning Working Group](https://www.w3.org/blog/2021/04/w3c-launches-the-web-machine-learning-working-group/)*
+
+
+
 			
 
 
