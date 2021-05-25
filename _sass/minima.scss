@@ -12,6 +12,8 @@ $spacing-unit:     30px !default;
 
 $text-color:       #474c58!default;
 $background-color: rgb(249, 249, 249) !default;
+$background-color-dark: darken($background-color, 10%) !default;
+
 $brand-color:      #4777c0 !default;
 $brand-color2:      #61bafb !default;
 $brand-color3:      #4fc3f7 !default;
@@ -59,3 +61,5 @@ $on-laptop:        800px !default;
   "minima/layout",
   "minima/syntax-highlighting"
 ;
+
+

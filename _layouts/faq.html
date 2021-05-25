@@ -73,8 +73,8 @@
         </div>
 
         <div class="accordion-item">
-          <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">What is the architecture
-              diagram?</span><span class="icon" aria-hidden="true"></span></button>
+          <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">How is the architecture of
+              WebNN?</span><span class="icon" aria-hidden="true"></span></button>
           <div class="accordion-content">
             <p>As illustrated in the architecture diagram of the figure above, web browsers may implement the WebNN API
               using native machine learning API available in the operating system. This architecture allows JavaScript
@@ -88,49 +88,6 @@
           </div>
         </div>
 
-
-        <div class="accordion-item">
-          <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">What the WebNN API looks
-              like?</span><span class="icon" aria-hidden="true"></span></button>
-          <div class="accordion-content">
-            <p>The WebNN API is a specification for constructing and executing computational graphs of neural networks.
-              It provides web applications with the ability to create, compile, and run machine learning networks on the
-              web browsers. The WebNN API may be implemented in web browsers using the available native operating system
-              machine learning APIs for the best performance and reliability of results. The following code sample
-              illustrates a simple usage of this API.</p>
-
-            <div class="language-js highlighter-rouge">
-              <div class="highlight">
-                <pre class="highlight"><code><span class="kd">const</span> <span class="nx">operandType</span> <span class="o">=</span> <span class="p">{</span><span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">float32</span><span class="dl">'</span><span class="p">,</span> <span class="na">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]};</span>
-            <span class="kd">const</span> <span class="nx">context</span> <span class="o">=</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">ml</span><span class="p">.</span><span class="nx">getNeuralNetworkContext</span><span class="p">();</span>
-            <span class="kd">const</span> <span class="nx">builder</span> <span class="o">=</span> <span class="nx">context</span><span class="p">.</span><span class="nx">createModelBuilder</span><span class="p">();</span>
-            <span class="c1">// 1. Create a model of the computational graph 'C = 0.2 * A + B'.</span>
-            <span class="kd">const</span> <span class="nx">constant</span> <span class="o">=</span> <span class="nx">builder</span><span class="p">.</span><span class="nx">constant</span><span class="p">(</span><span class="mf">0.2</span><span class="p">);</span>
-            <span class="kd">const</span> <span class="nx">A</span> <span class="o">=</span> <span class="nx">builder</span><span class="p">.</span><span class="nx">input</span><span class="p">(</span><span class="dl">'</span><span class="s1">A</span><span class="dl">'</span><span class="p">,</span> <span class="nx">operandType</span><span class="p">);</span>
-            <span class="kd">const</span> <span class="nx">B</span> <span class="o">=</span> <span class="nx">builder</span><span class="p">.</span><span class="nx">input</span><span class="p">(</span><span class="dl">'</span><span class="s1">B</span><span class="dl">'</span><span class="p">,</span> <span class="nx">operandType</span><span class="p">);</span>
-            <span class="kd">const</span> <span class="nx">C</span> <span class="o">=</span> <span class="nx">builder</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">builder</span><span class="p">.</span><span class="nx">mul</span><span class="p">(</span><span class="nx">A</span><span class="p">,</span> <span class="nx">constant</span><span class="p">),</span> <span class="nx">B</span><span class="p">);</span>
-            <span class="kd">const</span> <span class="nx">model</span> <span class="o">=</span> <span class="nx">builder</span><span class="p">.</span><span class="nx">createModel</span><span class="p">({</span><span class="dl">'</span><span class="s1">C</span><span class="dl">'</span><span class="p">:</span> <span class="nx">C</span><span class="p">});</span>
-            <span class="c1">// 2. Compile the model into executable.</span>
-            <span class="kd">const</span> <span class="nx">compilation</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">model</span><span class="p">.</span><span class="nx">compile</span><span class="p">();</span>
-            <span class="c1">// 3. Bind inputs to the model and execute for the result.</span>
-            <span class="kd">const</span> <span class="nx">bufferA</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Float32Array</span><span class="p">(</span><span class="mi">4</span><span class="p">).</span><span class="nx">fill</span><span class="p">(</span><span class="mf">1.0</span><span class="p">);</span>
-            <span class="kd">const</span> <span class="nx">bufferB</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Float32Array</span><span class="p">(</span><span class="mi">4</span><span class="p">).</span><span class="nx">fill</span><span class="p">(</span><span class="mf">0.8</span><span class="p">);</span>
-            <span class="kd">const</span> <span class="nx">inputs</span> <span class="o">=</span> <span class="p">{</span><span class="dl">'</span><span class="s1">A</span><span class="dl">'</span><span class="p">:</span> <span class="p">{</span><span class="na">buffer</span><span class="p">:</span> <span class="nx">bufferA</span><span class="p">},</span> <span class="dl">'</span><span class="s1">B</span><span class="dl">'</span><span class="p">:</span> <span class="p">{</span><span class="na">buffer</span><span class="p">:</span> <span class="nx">bufferB</span><span class="p">}};</span>
-            <span class="kd">const</span> <span class="nx">outputs</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">compilation</span><span class="p">.</span><span class="nx">compute</span><span class="p">(</span><span class="nx">inputs</span><span class="p">);</span>
-            <span class="c1">// The computed result of [[1, 1], [1, 1]] is in the buffer associated with</span>
-            <span class="c1">// the output operand.</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Output shape: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">outputs</span><span class="p">.</span><span class="nx">C</span><span class="p">.</span><span class="nx">dimensions</span><span class="p">);</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Output value: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">outputs</span><span class="p">.</span><span class="nx">C</span><span class="p">.</span><span class="nx">buffer</span><span class="p">);</span>
-            </code></pre>
-              </div>
-            </div>
-
-            <p>Check it out in <a
-                href="https://webmachinelearning.github.io/webnn-samples/code/?example=mul_add.js">WebNN Code
-                Editor</a>.</p>
-
-          </div>
-        </div>
         <div class="accordion-item">
           <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">What are the goals and
               non-goals of WebNN API?</span><span class="icon" aria-hidden="true"></span></button>
@@ -317,8 +274,9 @@
         </div>
 
         <div class="accordion-item">
-          <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Do we have considered
-              alternatives?</span><span class="icon" aria-hidden="true"></span></button>
+          <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">What alternatives have
+              been
+              considered?</span><span class="icon" aria-hidden="true"></span></button>
           <div class="accordion-content">
             <h3 id="stay-the-course-and-build-machine-learning-solutions-on-webglwebgpu">Stay the course and build
               machine learning solutions on WebGL/WebGPU</h3>
@@ -348,8 +306,8 @@
         </div>
 
         <div class="accordion-item">
-          <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Defining a model format
-              that covers both topology and weights?</span><span class="icon" aria-hidden="true"></span></button>
+          <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Why not define a model format that
+            covers both topology and weights?</span><span class="icon" aria-hidden="true"></span></button>
           <div class="accordion-content">
             <p>Defining a model format should simplify model loading, but it was explicitly stated as a non-goal for
               WebNN API to directly support model format as we believe formats should be left with the framework or the
@@ -405,7 +363,7 @@
           </div>
         </div>
 
-        <div class="accordion-item">
+        <!-- <div class="accordion-item">
           <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">What does the sample
               code look like?</span><span class="icon" aria-hidden="true"></span></button>
           <div class="accordion-content">
@@ -415,7 +373,7 @@
 
             <h3 id="sample-code">Sample code</h3>
 
-              <pre class="highlight"><code>const modelUrl = 'url/to/ml/model';
+            <pre class="highlight"><code>const modelUrl = 'url/to/ml/model';
             var exampleList = [{
               'Feature1': value1,
               'Feature2': value2
@@ -433,8 +391,8 @@
                 console.error("Inference failed: " + e);
               });
             </code></pre>
-        </div>
-      </div>
+          </div>
+        </div> -->
         <div class="accordion-item">
           <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How do we know this level
               of API will be useful?</span><span class="icon" aria-hidden="true"></span></button>
@@ -485,8 +443,7 @@
         </div>
         <div class="accordion-item">
           <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Why not just add more web
-              standard APIs that are application-specific?</span><span class="icon"
-              aria-hidden="true"></span></button>
+              standard APIs that are application-specific?</span><span class="icon" aria-hidden="true"></span></button>
           <div class="accordion-content">
 
             <p>Application-specific APIs like face detection and barcode detection have some issues:</p>
@@ -683,8 +640,7 @@
         </div>
         <div class="accordion-item">
           <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Is a model loader API
-              blocked on MLIR becoming a standard?</span><span
-              class="icon" aria-hidden="true"></span></button>
+              blocked on MLIR becoming a standard?</span><span class="icon" aria-hidden="true"></span></button>
           <div class="accordion-content">
             <p>Not necessarily. It’s possible that the shape of the API could be standardized on, without the details of
               an IR being
@@ -941,7 +897,13 @@
   </div>
 
   <div class="wrapper faqs mt">
-    <p>Thanks to all the <a href="https://www.w3.org/community/webmachinelearning/">Machine Learning for the Web Community Group</a> and <a href="https://www.w3.org/2020/06/machine-learning-workshop/">W3C Workshop on Web and Machine Learning</a> participants for their comments and feedbacks.</p>
+    <p>This FAQ builds upon the explainer
+      documents and as such may not always reflect the latest W3C group consensus.
+      Please see the specifications and their GitHub repositories for the latest
+      developments and discussions around these questions.</p>
+    <p>Thanks to all the <a href="https://www.w3.org/community/webmachinelearning/">Machine Learning for the Web
+        Community Group</a> and <a href="https://www.w3.org/2020/06/machine-learning-workshop/">W3C Workshop on Web and
+        Machine Learning</a> participants for their comments and feedbacks.</p>
   </div>
 
   {%- include footer.html -%}

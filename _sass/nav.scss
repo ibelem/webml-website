@@ -1,11 +1,6 @@
-/**
- * Site header
- */
 .site-header {
     border-top: 1px solid $brand-color2;
     min-height: $spacing-unit * 1.865;
-
-    // Positioning context for the mobile navigation icon
     position: relative;
 }
 
@@ -25,7 +20,7 @@
 .nav-grid {
     margin-top: 1rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas:
@@ -384,11 +379,19 @@ nav a {
         display: block;
         background: transparent;
         border: 0px solid rgba(200, 200, 200, 0.5);
-        box-shadow: 0px 0px 0px 0px rgba(200, 200, 200, 0.25);
     }
 
     .menu ol {
         margin-top: 0.5rem;
+    }
+
+    .menu-item {
+        text-align: center;
+        border-bottom: 1px solid $brand-color;
+    }
+
+    .menu ol li:last-child {
+        border-bottom: 0;
     }
 
     .menu ol>.menu-item:first-child {
@@ -397,6 +400,7 @@ nav a {
 
     .sub-menu .menu-item {
         padding: 0.5rem 0;
+        border-bottom: 0px;
     }
 
     .menu ol li ol.sub-menu .menu-item:first-child {
@@ -437,6 +441,7 @@ nav a {
         animation: enter 0.3s ease-out forwards;
         z-index: 10000;
         padding: 0.5rem 0;
+        width: 100%;
     }
 
     .faq {
