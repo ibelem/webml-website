@@ -8,7 +8,7 @@ Model Loader is a proposed web API to load a custom, pre-trained machine learnin
 
 <div class="herobar modelloader">
     <div class="buttons">
-        <a class="button button--atlas getstarted" href="https://github.com/webmachinelearning/model-loader/blob/master/explainer.md"><span>Specification</span>
+        <a class="button button--atlas getstarted" href="https://webmachinelearning.github.io/model-loader/"><span>Specification</span>
         <div class="marquee" aria-hidden="true">
             <div class="marqueeinner"><span>Specification</span><span>Specification</span><span>Specification</span><span>Specification</span></div>
         </div>

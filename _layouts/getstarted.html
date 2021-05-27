@@ -10,28 +10,30 @@
   <main class="page-content wrapper" aria-label="Content">
     {%- if site.posts.size > 0 -%}
 
-    <div class="cap">
-      <p class="title">The Journey for You to Get Started</p>
-    </div>
+    <div class="mt0 mb3">
+      <div class="cap">
+        <p class="title">Here's How to Get Started</p>
+      </div>
 
-    <div class="gr wrapper gs">
-      <ul>
-        <li>Run the <a href="{{ 'webnn-samples' | relative_url }}">WebNN Samples</a> that demonstrate the key use cases
-        </li>
-        <li>Play with the <a href="https://webmachinelearning.github.io/webnn-samples/code/">code editor</a> in your
-          browser to get a feel of the API shape</li>
-        <li>Clone the <a href="https://github.com/webmachinelearning/webnn-polyfill">webnn-polyfill</a> and build your
-          first experiment</li>
-      </ul>
+      <div class="gr wrapper gs">
+        <ul>
+          <li>Run the <a href="{{ 'webnn-samples' | relative_url }}">WebNN Samples</a> that demonstrate the key use cases
+          </li>
+          <li>Play with the <a href="https://webmachinelearning.github.io/webnn-samples/code/">code editor</a> in your
+            browser to get a feel of the API shape</li>
+          <li>Clone the <a href="https://github.com/webmachinelearning/webnn-polyfill">webnn-polyfill</a> and build your
+            first experiment</li>
+        </ul>
 
-      <ul>
-        <li>Dive into the native implementation details with <a
-            href="https://github.com/webmachinelearning/webnn-native">webnn-native</a></li>
-        <li>Join the <a href="{{ 'community' | relative_url }}">community</a> to help shape the related specifications
-        </li>
-      </ul>
+        <ul>
+          <li>Dive into the native implementation details with <a
+              href="https://github.com/webmachinelearning/webnn-native">webnn-native</a></li>
+          <li>Join the <a href="{{ 'community' | relative_url }}">community</a> to help shape the related specifications
+          </li>
+        </ul>
+      </div>
     </div>
-    </div>
+    
     <div class="l1r4">
       <div id="archives">
         {% for category in site.categories %}

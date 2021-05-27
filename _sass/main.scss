@@ -14,7 +14,7 @@
     width: 25px;
     animation: pulse 1s ease infinite;
     animation-delay: 3s;
-    margin: 0 1rem;
+    margin: 0 0.4rem;
   }
   
   @keyframes pulse {
@@ -290,7 +290,7 @@ table th {
 }
 
 .my {
-    height: 360px;
+    height: 380px;
 }
 
 #herosvg {
@@ -589,7 +589,7 @@ table th {
 .blflex {
     display: flex;
     align-items: center;
-    margin-top: 0.5rem;
+    margin: 0.5rem auto;
 }
 
 .post p {
@@ -621,7 +621,8 @@ table th {
 
 @media screen and (max-width: 640px) {
     .herobar {
-        display: grid;
+        margin-top: 80px;
+        display: block !important;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 0px 0px;
@@ -658,6 +659,15 @@ table th {
     .herobar .button {
         padding: 0.6rem 1rem;
         width: 100px;
+    }
+
+    .hero {
+        margin: 2rem 0 2rem 0;
+        display: block !important;
+    }
+
+    .my {
+        height: auto;
     }
 
     .postdetail {
@@ -738,10 +748,6 @@ ul.c4 li {
         width: 90px;
     }
 
-    .herobar {
-        margin-top: 80px;
-    }
-
     .modelloader {
         margin: 2rem 0 !important;
     }
@@ -764,8 +770,8 @@ ul.c4 li {
     }
 
     .adv {
-        margin: 1rem 0 !important;
-        padding: 2rem 0 0 0 !important;
+        margin: 0rem 0 !important;
+        padding: 1rem 0 0 0 !important;
     }
 
     .cap {
@@ -868,8 +874,64 @@ ul.c4 li {
     padding: 2rem 0 0 0;
 }
 
-.mt {
+.index {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.mt, .mt2 {
     margin-top: 2rem;
+}
+
+.mb, .mb2 {
+    margin-bottom: 2rem;
+}
+
+.mt0 {
+    margin-top: 0rem;
+}
+
+.mb0 {
+    margin-bottom: 0rem;
+}
+
+.mt02 {
+    margin-top: 0.2rem;
+}
+
+.mb02 {
+    margin-bottom: 0.2rem;
+}
+
+.mt03 {
+    margin-top: 0.3rem;
+}
+
+.mb03 {
+    margin-bottom: 0.3rem;
+}
+
+.mt05 {
+    margin-top: 0.5rem;
+}
+
+.mb05 {
+    margin-bottom: 0.5rem;
+}
+
+.mt1 {
+    margin-top: 1rem;
+}
+
+.mb1 {
+    margin-bottom: 1rem;
+}
+
+.mt3 {
+    margin-top: 3rem;
+}
+
+.mb3 {
+    margin-bottom: 3rem;
 }
 
 .cap {
@@ -1004,7 +1066,7 @@ ul.c4 li {
 }
 
 .typing {
-    width: 368px;
+    width: 344px;
     animation: typing 2s steps(27), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;

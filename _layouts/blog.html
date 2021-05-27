@@ -32,9 +32,19 @@ layout: bloglist
       <div class="post">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <p class="posttitle"><a class="postlink" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></p>
+        <div class="blflex">
+          <span class="postimg">
+              <img alt="profile" src="{{ post.avatar }}">
+          </span>
+          <div class="postsub">
+              <p class="postauthor">{{ post.author | escape }}</p>
+              <p class="postdate">{{ post.date | date: date_format }}</p>
+          </div>
+        </div>
         <div>
           {% if post.content contains "<!-- more -->" %}
           {{ post.content | split:"<!-- more -->" | first }}
+
           <div style="text-align:right;">
             <a href="{{ post.url | relative_url }}"> Read More
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
