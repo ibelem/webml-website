@@ -743,6 +743,20 @@ ul.c4 li {
     text-align: center;
 }
 
+.typing {
+    width: 344px;
+    animation: typing 2s steps(27), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid $brand-color;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 1.4rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    text-align: left;
+}
+
 @media screen and (max-width: 640px) {
     .hlink a {
         width: 90px;
@@ -843,6 +857,11 @@ ul.c4 li {
 
     .faqs.gr {
         display: block !important;
+    }
+    .typing {
+        width: 344px;
+        text-align: center;
+        margin: 0 auto;
     }
 }
 
@@ -1063,19 +1082,6 @@ ul.c4 li {
 
 .current {
     color: $brand-color2 !important;
-}
-
-.typing {
-    width: 344px;
-    animation: typing 2s steps(27), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 1px solid $brand-color;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-size: 1.4rem;
-    font-weight: 200;
-    text-transform: uppercase;
 }
 
 @keyframes typing {

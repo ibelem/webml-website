@@ -2,7 +2,7 @@
 layout: post
 title: 'Noise Suppression Net 2 (NSNet2)'
 date: 2021-03-17 20:42:03 +0800
-author: Anssi, Chai and Ningxin 
+author: Web Machine Learning Working Group
 avatar: https://avatars.githubusercontent.com/u/379216?s=200&v=4
 categories: get-started
 ---

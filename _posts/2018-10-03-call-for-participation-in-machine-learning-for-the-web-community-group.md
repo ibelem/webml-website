@@ -2,7 +2,7 @@
 layout: post
 title: 'Call for Participation in Machine Learning for the Web Community Group'
 date: 2018-10-03 20:42:03 +0800
-author: W3C Team
+author: W3C Community Development Team
 avatar: https://avatars.githubusercontent.com/u/379216?s=200&v=4
 categories: blog
 ---
@@ -28,6 +28,3 @@ If you believe that there is an issue with this group that requires the attentio
 
 Thank you,<br>
 W3C Community Development Team
-
- 
-

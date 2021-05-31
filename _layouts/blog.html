@@ -29,6 +29,11 @@ layout: bloglist
     </div>
     <div>
       {%- for post in site.posts -%}
+
+      {% capture category_name %}{{ post.categories | first }}{% endcapture %}    
+
+      {% if category_name == "blog" %}
+
       <div class="post">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <p class="posttitle"><a class="postlink" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></p>
@@ -58,6 +63,8 @@ layout: bloglist
           {% endif %}
         </div>
       </div>
+
+      {% endif %}
       {%- endfor -%}
     </div>
   </div>

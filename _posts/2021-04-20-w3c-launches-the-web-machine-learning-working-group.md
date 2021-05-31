@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How We Embarked on the WG Journey"
+title:  "W3C Launches the Web Machine Learning Working Group"
 date:   2021-04-20 18:00:00 +0800
 author: Dominique Hazaël-Massieux
 avatar: https://avatars.githubusercontent.com/u/216410?v=4

@@ -2,8 +2,8 @@
 layout: post
 title: 'Build Your First Graph with WebNN API'
 date: 2021-03-15 20:42:03 +0800
-author: Anssi Kostiainen
-avatar: https://avatars.githubusercontent.com/u/765510?s=120&v=4
+author: Web Machine Learning Working Group
+avatar: https://avatars.githubusercontent.com/u/379216?s=200&v=4
 categories: get-started
 ---
 

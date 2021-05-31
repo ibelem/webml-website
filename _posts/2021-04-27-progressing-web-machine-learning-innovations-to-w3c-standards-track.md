@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "W3C Launches the Web Machine Learning Working Group"
+title:  "Progressing Web Machine Learning Innovations to W3C Standards Track"
 date:   2021-04-27 18:00:00 +0800
 author: Anssi Kostiainen
 avatar: https://avatars.githubusercontent.com/u/765510?s=120&v=4
