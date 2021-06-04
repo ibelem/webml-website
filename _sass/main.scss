@@ -116,7 +116,7 @@
 }
 
 .bgr {
-    background: linear-gradient(-45deg,$brand-color2,$brand-color);
+    background: linear-gradient(-45deg,$brand-color2, $brand-color0);
     color: white;
 }
 
@@ -216,7 +216,7 @@ table th {
 }
 
 #archives {
-    background: linear-gradient(-45deg, $brand-color2, $brand-color);
+    background: linear-gradient(-45deg, $brand-color2, $brand-color0);
     color: #fff;
     border-radius: 3px;
     padding: 1rem;
@@ -308,7 +308,7 @@ table th {
 }
 
 .getstarted {
-    background-image: linear-gradient(135deg, #5eb4fe, #62d3fd);
+    background-image: linear-gradient(135deg, #5eb4fe, $brand-color);
 }
 
 .getstarted:hover {
@@ -327,7 +327,7 @@ table th {
     margin: 0 0.5rem;
     width: 100px;
     text-align: center;
-    border: 1px solid $brand-color2;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .herobar .buttonwhite {
@@ -550,6 +550,10 @@ table th {
         ". .";
     align-items: center;
     justify-content: center;
+}
+
+.doc .arch {
+    align-items: flex-start;
 }
 
 .arch ul {

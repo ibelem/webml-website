@@ -14,8 +14,10 @@ $text-color:       #474c58!default;
 $background-color: rgb(249, 249, 249) !default;
 $background-color-dark: darken($background-color, 10%) !default;
 
+
 $brand-color:      #4777c0 !default;
-$brand-color2:      #61bafb !default;
+$brand-color0:      darken($brand-color, 20%) !default;
+$brand-color2:      #4777c0 !default;
 $brand-color3:      #4fc3f7 !default;
 $brand-color4:      #b3e5fc !default;
 $brand-color5:      #e1f5fe !default;
